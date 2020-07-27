@@ -15,7 +15,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use('/files', express.static(uplooadConfig.tmpFolder));
+app.use('/files', express.static(uplooadConfig.uploadsFolder));
 app.use(routes);
 
 app.get('/', (request, response) => response.json({ message: 'amaralDelivery' }));
