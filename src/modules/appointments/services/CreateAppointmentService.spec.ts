@@ -23,7 +23,6 @@ describe('CreateAppointment', () => {
       provider_id: 'provider-id',
     });
 
-
     expect(appointment).toHaveProperty('id');
     expect(appointment.provider_id).toBe('provider-id');
   });
