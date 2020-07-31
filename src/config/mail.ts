@@ -15,7 +15,7 @@ export default {
   defaults: {
     from: {
       email: 'tuliosantos@gee.inatel.br',
-      name: 'Túlio do Supermercado Amaral',
+      name: 'Túlio | Supermercado Amaral',
     },
   },
 } as IMailConfig;
