@@ -14,12 +14,11 @@ describe('AuthenticateUser', () => {
     fakeUsersRepository = new FakeUsersRepository();
     fakeHashProvider = new FakeHashProvider();
 
-    createUser = new CreateUserService(fakeUsersRepository, fakeHashProvider);
     authenticateUser = new AuthenticateUserService(fakeUsersRepository, fakeHashProvider);
   });
 
   it('should be able to authenticate user', async () => {
-    const user = await createUser.execute({
+    const user = await fakeUsersRepository.create({
       name: 'John Doe',
       email: 'johndoe@example.com',
       password: '123456',
